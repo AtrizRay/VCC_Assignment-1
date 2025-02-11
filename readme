@@ -1,27 +1,27 @@
 #Assignment 1
 
-## **Project Overview**
+**Project Overview**
 This project demonstrates the deployment of a microservice-based architecture across multiple Virtual Machines (VMs) using VirtualBox. The services communicate over a configured network and are containerized using Docker for scalability and portability.
 
-## **Technologies Used**
+**Technologies Used**
 - **VirtualBox** (VM management)
 - **Ubuntu 22.04** (OS for VMs)
 - **Python & Flask** (Microservices framework)
 - **Docker** (Containerization)
 - **GitHub** (Version control)
 
-## **Project Setup & Execution**
+**Project Setup & Execution**
 
-### **1. Setup Virtual Machines**
+**1. Setup Virtual Machines**
 1. Install VirtualBox and create two VMs (`vm1-user-service` and `vm2-order-service`).
 2. Configure network settings: 
    - Adapter 1: NAT (for internet access)
    - Adapter 2: Host-Only Adapter (for inter-VM communication)
 3. Assign static IPs to VMs and verify connectivity using `ping`.
 
-### **2. Deploy Microservices**
+**2. Deploy Microservices**
 
-#### **User Service (VM1)**
+**User Service (VM1)**
 ```bash
 sudo apt update && sudo apt install -y python3 python3-pip
 pip3 install flask
@@ -45,7 +45,7 @@ Run the service:
 python3 app.py
 ```
 
-#### **Order Service (VM2)**
+**Order Service (VM2)**
 ```bash
 sudo apt update && sudo apt install -y python3 python3-pip
 pip3 install flask requests
@@ -76,14 +76,14 @@ Run the service:
 python3 app.py
 ```
 
-### **3. Deploy Microservices Using Docker**
+**3. Deploy Microservices Using Docker**
 
-#### **Install Docker**
+**Install Docker**
 ```bash
 sudo apt update && sudo apt install -y docker.io
 ```
 
-#### **Build & Run User Service (VM1)**
+**Build & Run User Service (VM1)**
 Create `Dockerfile`:
 ```dockerfile
 FROM python:3.9
@@ -97,7 +97,7 @@ docker build -t user-service .
 docker run -d -p 5000:5000 user-service
 ```
 
-#### **Build & Run Order Service (VM2)**
+**Build & Run Order Service (VM2)**
 Create `Dockerfile`:
 ```dockerfile
 FROM python:3.9
@@ -111,7 +111,7 @@ docker build -t order-service .
 docker run -d -p 5001:5001 order-service
 ```
 
-### **4. Testing the Deployment**
+**4. Testing the Deployment**
 - Test User Service:
 ```bash
 curl http://192.168.1.101:5000/users/1
@@ -121,12 +121,11 @@ curl http://192.168.1.101:5000/users/1
 curl http://192.168.1.102:5001/orders/101
 ```
 
-## **Repository & Demo**
+**Repository & Demo**
 - **Source Code**: [GitHub Repo Link](https://github.com/your-repo-link)
 - **Video Demonstration**: [Demo Video Link](https://your-demo-link.com)
 
-## **Conclusion**
+**Conclusion**
 This project successfully demonstrates the deployment of a distributed microservice architecture across multiple VMs with containerized services. This setup enhances scalability, modularity, and ease of deployment.
-
 ---
 
