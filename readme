@@ -1,10 +1,7 @@
-# **Microservices Deployment on Virtual Machines**
+#Assignment 1
 
 ## **Project Overview**
 This project demonstrates the deployment of a microservice-based architecture across multiple Virtual Machines (VMs) using VirtualBox. The services communicate over a configured network and are containerized using Docker for scalability and portability.
-
-## **Architecture Overview**
-![Architecture Diagram](link-to-your-architecture-diagram.png)
 
 ## **Technologies Used**
 - **VirtualBox** (VM management)
@@ -133,4 +130,3 @@ This project successfully demonstrates the deployment of a distributed microserv
 
 ---
 
-### 🚀 **Happy Coding!** 🎯
