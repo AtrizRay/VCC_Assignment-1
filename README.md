@@ -123,7 +123,7 @@ curl http://192.168.1.102:5001/orders/101
 
 **Repository & Demo**
 - **Source Code**: https://github.com/AtrizRay/VCC_Assignment-1.git
-- **Video Demonstration**: [Demo Video Link](https://your-demo-link.com)
+- **Video Demonstration**: (https://youtu.be/4uWfhzRE9zI?si=GHMZnMeURC8FyNBV)
 
 **Conclusion**
 This project successfully demonstrates the deployment of a distributed microservice architecture across multiple VMs with containerized services. This setup enhances scalability, modularity, and ease of deployment.
